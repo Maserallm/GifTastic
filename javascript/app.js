@@ -12,8 +12,9 @@ function renderButtons() {
 
     for (let i = 0; i < gifContainer.length; i++) {
     let button = $("<button>");
-    button.addClass("giphy");
-    button.attr("data-name", gifContainer[i])
+    button.addClass("giphy m-1 btn btn-outline-dark");
+    button.attr("data-name", gifContainer[i]);
+   // button.attr("class", "m-1 btn btn-outline-dark");
     button.text(gifContainer[i]);
     button.appendTo("#gif-buttons");
         console.log(gifContainer[i]);
@@ -28,7 +29,7 @@ $("#add-gif").on("click", function (){
 
    gifContainer.push(userInput);
    $("<button>").html(userInput)
-       .addClass("giphy")
+       .addClass("giphy m-1 btn btn-outline-dark")
        .attr("data-name", userInput)
        .appendTo("#gif-buttons");
 
@@ -73,7 +74,7 @@ $(document).on("click", ".giphy", function () {
             giphyImg.appendTo(giphyDiv);
             p.appendTo(giphyDiv);
 
-            $("#gif-displsay").append(giphyDiv);
+            $("#gif-displsay").prepend(giphyDiv);
         }
     })
 });
