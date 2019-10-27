@@ -46,6 +46,26 @@ $(document).on("click", ".giphy", function () {
     }).then(function (response) {
         console.log(response)
 
-        $("#")
+        let results = response.data;
+
+        for (var i = 0; i < results.length; i++) {
+            
+            let still = results[i].images.downsized.url;
+            let animate = results[i].images.downsized_still.url;
+            let rating = results[i].rating;
+
+            console.table(results[i].rating)
+
+            let p = $("<p>").text("Rating: " + rating);
+
+            let giphyDiv = $("<div>");
+
+            let giphyImg = $("<img>");
+            giphyImg.attr("src", still);
+            giphyImg.appendTo(giphyDiv);
+            p.appendTo(giphyDiv);
+
+            $("#gif-displsay").prepend(giphyDiv);
+        }
     })
 })
