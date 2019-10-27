@@ -20,16 +20,19 @@ function renderButtons() {
     }
 }; renderButtons()
 
- $("#add-gif").on("click", function (){
-    event.preventDefault();
-   
-    userInput = $("#user-input").val().trim();
-    console.log(userInput);
+$("#add-gif").on("click", function (){
+   event.preventDefault();
+  
+   userInput = $("#user-input").val().trim();
+   console.log(userInput);
 
-    $("<button>").html(userInput)
-        .addClass("giphy")
-        .attr("data-name", userInput)
-        .appendTo("#gif-buttons");
+   gifContainer.push(userInput);
+   $("<button>").html(userInput)
+       .addClass("giphy")
+       .attr("data-name", userInput)
+       .appendTo("#gif-buttons");
+
+       
 });
 
 $(document).on("click", ".giphy", function () {
@@ -61,11 +64,28 @@ $(document).on("click", ".giphy", function () {
             let giphyDiv = $("<div>");
 
             let giphyImg = $("<img>");
+            giphyImg.addClass("gif-choice");
             giphyImg.attr("src", still);
+            giphyImg.attr("data-state", "still");
+            giphyImg.attr("data-animate", animate);
+            giphyImg.attr("data-still", still);
+
             giphyImg.appendTo(giphyDiv);
             p.appendTo(giphyDiv);
 
-            $("#gif-displsay").prepend(giphyDiv);
+            $("#gif-displsay").append(giphyDiv);
         }
     })
-})
+});
+
+$(document).on("click", ".gif-choice", function() {
+    let state = $(this).attr("data-state");
+
+    if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+});
