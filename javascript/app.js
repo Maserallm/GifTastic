@@ -1,6 +1,6 @@
 let gifContainer = ["loud", "thinking", "running", "exhausted", "broke", "burned out", "coding"];
 const apiKey = "&api_key=jbGLFe0vcmIZQJpZtYbTkv2FW7Dq0a1G&limit=10";
-const giphyUrl = "http://api.giphy.com/v1/gifs/search?q=";
+const giphyUrl = "https://api.giphy.com/v1/gifs/search?q=";
 let userSearch;
 
 
