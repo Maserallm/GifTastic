@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Get Giphy App</title>
-    <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-</head>
-<body>
-    
+    <link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
     <div class="container text-center">
-        <h2 class="text-center mt-3">Welcome to Gif-tastic!</h2><br>
-        
-        <p class="lead text-center">Click on any of the pre-configured buttons to generate a giph! Want more options? Type in the search bar to create your own giphy button generator. Enjoy!</p>
+      <h2 class="text-center mt-3">Welcome to Gif-tastic!</h2>
+      <br />
 
-        <div class="row m-2" id="gif-buttons"></div>
+      <p class="lead text-center">
+        Click on any of the pre-configured buttons to generate a giph! Want more
+        options? Type in the search bar to create your own giphy button
+        generator. Enjoy!
+      </p>
 
-        <div class="row">
-            <div class="col-sm" id="gif-displsay"></div>
+      <div class="row m-2" id="gif-buttons"></div>
 
-            <div class="col-sm">
-                <form>
-                    <h4>Add a Gif!</h4>
-                    <div class="form-row">
-                        
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Search Gif Here" id="user-input">
-                        </div>
+      <div class="row">
+        <div class="col-sm">
+          <form>
+            <h4>Add a Gif!</h4>
+            <div class="form-row">
+              <div class="col">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search Gif Here"
+                  id="user-input"
+                />
+              </div>
 
-                        <div class="col">
-                            <button type="submit" class="btn btn-outline-dark" id="add-gif">Add</button>
-                        </div>
-                    </div> 
-                </form>
+              <div class="col">
+                <button type="submit" class="btn btn-outline-dark" id="add-gif">
+                  Add
+                </button>
+              </div>
             </div>
-
+          </form>
         </div>
+      </div>
+      <div class="col-sm" id="gif-display"></div>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <script src="javascript/app.js" type="text/javascript"></script>
-</body>
+  </body>
 </html>

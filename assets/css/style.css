@@ -1,0 +1,15 @@
+#gif-display {
+  display: grid;
+  margin: 30px 0px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+/* 
+#gif-display div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+} */
+
+.gif-choice {
+  width: 100%;
+}
